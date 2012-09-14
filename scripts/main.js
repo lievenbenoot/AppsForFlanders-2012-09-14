@@ -32,12 +32,16 @@ $(function() {
         localStorage['accounts'] = JSON.stringify(new Array("Account 1"));
     } 
      
+
     if($("div#loadScreen").length > 0) {
         loadFilteredJson();
     }
     else if($("div#favoritesScreen").length > 0) {
         loadFavoritesScreen();
     }
+    else if($("div#matchScreen").length > 0) {
+        loadMatchScreen();
+
     else if($("div#accountScreen").length > 0) {
         loadAccountScreen();
     }
@@ -80,7 +84,7 @@ function loadFilteredJson() {
        
                 data = data.concat(girls.sqlquery);                
                 localStorage['data'] = JSON.stringify(data);
-                localStorage['filteredData']=localStorage['data'] ;
+                localStorage['filteredData']=localStorage['data'];
                 window.location.href = 'home.html';
             });
         });
