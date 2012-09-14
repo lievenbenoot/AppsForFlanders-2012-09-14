@@ -1,4 +1,31 @@
+@font-face {
+    font-family: "Lobster Two";
+    src: url("LobsterTwo-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Cubano Regular";
+    src: url("Cubano-Regular.otf") format("opentype");
+}
 body {
+    background-color: #f4ffe4;
+}
+h1 {
+    font-family: "Lobster Two";
+    color: #007a9c;
+    text-align: center;
+}
+div#loadScreen {
+    position: absolute;
+    bottom: 0px;
+    top: 25%;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    line-height: 100%;
+}
+div#loadScreen img {
+    width: 200px;
 }
 
 /* Filters */
@@ -71,6 +98,9 @@ div.element {
     border-radius: 10px;
     padding: 5px;
     margin: 5px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 div.element span {
     float: right;
@@ -97,12 +127,13 @@ ul.menu li {
     margin: 0px;
     padding: 0px;
     text-align: center;
-    background-color: black;
+    background-color: #007A9C;
 }
 ul.menu li a {
     width: 100%;
     display: block;
-    line-height: 30px;
+    margin: 0px;
+    padding: 0px;
 }
 span.new {
     background-color: #ccc;
