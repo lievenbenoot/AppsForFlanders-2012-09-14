@@ -24,7 +24,7 @@ $(function() {
     localStorage['accounts']=JSON.stringify(new Array('lieven','sam'));
     
     localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));
-    localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));*/  
+    localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));
     
     if(typeof localStorage['selectedAccount'] == 'undefined') {
         localStorage['selectedAccount'] = 'Account 1';
