@@ -1,7 +1,7 @@
 #radcontentcontainer {
   position:relative;
-  width:280px;
-  height:300px;
+  width:220px;
+  height:280px;
 }
 
 #radview {
@@ -28,27 +28,27 @@
   left: 0px; right: 0px;
 }
 
-.raditem.girl {
-  
+.raditem.girl .raditemcontent{
+  background: #FFD6ED
 }
 
-.raditem.boy {
-  background: lightblue;
+.raditem.boy .raditemcontent{
+  background: #8ED2E2;
 }
 
 .raditemcontent{
   position:absolute;
   left:2px;right:2px;top:2px;bottom:2px;
   
-  border: 1px solid blue;
-
-  background: lightblue;
+  /*border: 1px solid blue;*/
   
   text-align: center;
   padding-top: 8px;
   
   font-size: 17pt;
   font-family: sans-serif;
+  
+  border-radius:10px;
 }
 
 
@@ -56,23 +56,24 @@
 // HANDLE
 */
 #radhandle {
-  width: 80px;
+  width: 50px;
   height: 220px;
-  background-color: #ddd;
   position:relative;
 }
 #radhandlebg {
   position:absolute;
-  width: 50px;
-  height: 30px;
+  width: 37px;
+  height: 27px;
   top:160px;
+  
+  background-image: url("../img/handle_corner.png");
 }
 #radhandletop {
   position:absolute;
-  width: 50px;
-  height: 50px;
-  left: 15px;
-  top: 0px;
+  width: 30px;
+  height: 30px;
+  left: 17px;
+  top: 10px;
   
   
   
@@ -87,9 +88,9 @@
   z-index: 6;
 }
 #radhandlebar {
-  left:30px;
+  left:25px;
   position:absolute;
-  width: 20px;
+  width: 13px;
   height: 150px;
   top: 25px;
   
@@ -108,7 +109,7 @@
 #radhandle.down #radhandlebg {
 }
 #radhandle.down #radhandletop {
-  top: 110px;
+  top: 120px;
 }
 #radhandle.down #radhandlebar {
   height: 30px;
@@ -125,20 +126,41 @@
   overflow:hidden;
   
   /* center*/
-  width: 450px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
   
-  background-color: #ccc;
+  padding:20px;
+  
+  background-color: #007A9C;
+  
+  border-radius:10px;
 }
 
 #radcontentcontainer {
   float:left;
-  margin:20px;
+  
+  background-color: #D68BB5;
+  padding: 20px;
+  
+  border-radius:10px;
 }
 
 #radhandlecontainer {
-  margin-left:20px;
   margin-top:50px;
   float:left;
+}
+
+#radmachine{
+  overflow:hidden;
+}
+
+#radmenu {
+  clear:both;
+  margin-top: 20px;
+}
+
+#radmenu .button{
+  width: 45px;
+  height:28px;
 }
