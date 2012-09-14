@@ -1,0 +1,144 @@
+#radcontentcontainer {
+  position:relative;
+  width:280px;
+  height:300px;
+}
+
+#radview {
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+#radcontent {
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+}
+
+.raditem {
+  position:absolute;
+  /* height and top set by script */
+  width: 100%;
+  left: 0px; right: 0px;
+}
+
+.raditem.girl {
+  
+}
+
+.raditem.boy {
+  background: lightblue;
+}
+
+.raditemcontent{
+  position:absolute;
+  left:2px;right:2px;top:2px;bottom:2px;
+  
+  border: 1px solid blue;
+
+  background: lightblue;
+  
+  text-align: center;
+  padding-top: 8px;
+  
+  font-size: 17pt;
+  font-family: sans-serif;
+}
+
+
+/*
+// HANDLE
+*/
+#radhandle {
+  width: 80px;
+  height: 220px;
+  background-color: #ddd;
+  position:relative;
+}
+#radhandlebg {
+  position:absolute;
+  width: 50px;
+  height: 30px;
+  top:160px;
+}
+#radhandletop {
+  position:absolute;
+  width: 50px;
+  height: 50px;
+  left: 15px;
+  top: 0px;
+  
+  
+  
+  transition: top 1s;
+  -moz-transition: top 1s; /* Firefox 4 */
+  -webkit-transition: top 1s; /* Safari and Chrome */
+  -o-transition: top 1s; /* Opera */
+  
+  
+  background-image:url("../img/handle_top.png");
+  
+  z-index: 6;
+}
+#radhandlebar {
+  left:30px;
+  position:absolute;
+  width: 20px;
+  height: 150px;
+  top: 25px;
+  
+  z-index: 5;
+  
+  background-image:url("../img/handle_bar.png");
+  background-position: left 0px;
+  
+  transition: top 1s, height 1s, background-position 1s;
+  -moz-transition: top 1s, height 1s, background-position 1s; /* Firefox 4 */
+  -webkit-transition: top 1s, height 1s, background-position 1s; /* Safari and Chrome */
+  -o-transition: top 1s, height 1s, background-position 1s; /* Opera */
+}
+
+#radhandle.down {}
+#radhandle.down #radhandlebg {
+}
+#radhandle.down #radhandletop {
+  top: 110px;
+}
+#radhandle.down #radhandlebar {
+  height: 30px;
+  top: 145px;
+  
+  background-position: left -250px;
+}
+
+
+/* TOTAL */
+
+#radtotal {
+  float:clear;
+  overflow:hidden;
+  
+  /* center*/
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  background-color: #ccc;
+}
+
+#radcontentcontainer {
+  float:left;
+  margin:20px;
+}
+
+#radhandlecontainer {
+  margin-left:20px;
+  margin-top:50px;
+  float:left;
+}
