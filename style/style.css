@@ -1,3 +1,24 @@
 body {
     background-color: green;
 }
+
+/* CARROUSEL */
+div#homeScreen {
+    overflow: hidden;
+}
+div#carrousel {
+    height: 100%;
+    width: 99999px;
+    overflow: hidden;
+    border: 1px solid red;
+}
+div#carrousel div {
+    position: relative;
+    float: left;
+}
+div#carrousel #wheel {
+    background-color: red;
+}
+span.name {
+    cursor: pointer;
+}
