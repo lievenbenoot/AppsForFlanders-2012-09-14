@@ -19,32 +19,14 @@ Array.prototype.remove = function(name) {
 }
 
 $(function() {   
-    localStorage.clear();    
-    localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
-    localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));
-    localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));
-    /*localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));*/  
-    
-    /*var name = searchByName('Sam');
-    console.log(name);*/
-    
-    if(typeof localStorage['selectedAccount'] == 'undefined') {
-        localStorage['selectedAccount'] = 'Account 1';
-        localStorage['accounts'] = JSON.stringify(new Array("Account 1"));
-    } 
+    /*localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
+    localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));*/
      
-
     if($("div#loadScreen").length > 0) {
         loadFilteredJson();
     }
     else if($("div#favoritesScreen").length > 0) {
         loadFavoritesScreen();
-    }
-    else if($("div#matchScreen").length > 0) {
-        loadMatchScreen();
-    }
-    else if($("div#accountScreen").length > 0) {
-        loadAccountScreen();
     }
     else {
         windowWidth = $(window).width();
@@ -85,7 +67,7 @@ function loadFilteredJson() {
        
                 data = data.concat(girls.sqlquery);                
                 localStorage['data'] = JSON.stringify(data);
-                localStorage['filteredData']=localStorage['data'];
+                localStorage['filteredData']=localStorage['data'] ;
                 window.location.href = 'home.html';
             });
         });
@@ -95,14 +77,8 @@ function loadFilteredJson() {
     }
 }
 
-function searchByName(name) {
-    var names=JSON.parse(localStorage['data']);
+function loadFavorites() {
     
-    $.each(names, function(key, val) {
-        if(val.name == name) {
-            return val;
-        }    
-    });
 }
 
 /**
@@ -132,4 +108,12 @@ function scrollCarrousel(page) {
             $('#carrousel').animate({ 'marginLeft' : 0 });
         }
     }
+}
+
+var currentnamedata=null;
+function setCurrentName(_currentnamedata) {
+  currentnamedata=_currentnamedata;
+  var max = (currentnamedata["gender"]=="girl"?girlMaxed:boyMaxed);
+  $("#user_name").text(currentnamedata["name"]);
+  $("#user_populatirity").text("Populariteit: "+(currentnamedata["amount"]/max)*100+"%");
 }
