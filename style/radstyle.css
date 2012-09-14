@@ -1,7 +1,12 @@
 #radcontentcontainer {
   position:relative;
+<<<<<<< HEAD
   width:280px;
   height:300px;
+=======
+  width:220px;
+  height:280px;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
 }
 
 #radview {
@@ -28,27 +33,45 @@
   left: 0px; right: 0px;
 }
 
+<<<<<<< HEAD
 .raditem.girl {
   
 }
 
 .raditem.boy {
   background: lightblue;
+=======
+.raditem.girl .raditemcontent{
+  background: #FFD6ED
+}
+
+.raditem.boy .raditemcontent{
+  background: #8ED2E2;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
 }
 
 .raditemcontent{
   position:absolute;
   left:2px;right:2px;top:2px;bottom:2px;
   
+<<<<<<< HEAD
   border: 1px solid blue;
 
   background: lightblue;
+=======
+  /*border: 1px solid blue;*/
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
   
   text-align: center;
   padding-top: 8px;
   
   font-size: 17pt;
   font-family: sans-serif;
+<<<<<<< HEAD
+=======
+  
+  border-radius:10px;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
 }
 
 
@@ -56,13 +79,19 @@
 // HANDLE
 */
 #radhandle {
+<<<<<<< HEAD
   width: 80px;
   height: 220px;
   background-color: #ddd;
+=======
+  width: 50px;
+  height: 220px;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
   position:relative;
 }
 #radhandlebg {
   position:absolute;
+<<<<<<< HEAD
   width: 50px;
   height: 30px;
   top:160px;
@@ -73,6 +102,20 @@
   height: 50px;
   left: 15px;
   top: 0px;
+=======
+  width: 37px;
+  height: 27px;
+  top:160px;
+  
+  background-image: url("../img/handle_corner.png");
+}
+#radhandletop {
+  position:absolute;
+  width: 30px;
+  height: 30px;
+  left: 17px;
+  top: 10px;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
   
   
   
@@ -87,9 +130,15 @@
   z-index: 6;
 }
 #radhandlebar {
+<<<<<<< HEAD
   left:30px;
   position:absolute;
   width: 20px;
+=======
+  left:25px;
+  position:absolute;
+  width: 13px;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
   height: 150px;
   top: 25px;
   
@@ -108,7 +157,11 @@
 #radhandle.down #radhandlebg {
 }
 #radhandle.down #radhandletop {
+<<<<<<< HEAD
   top: 110px;
+=======
+  top: 120px;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
 }
 #radhandle.down #radhandlebar {
   height: 30px;
@@ -125,15 +178,28 @@
   overflow:hidden;
   
   /* center*/
+<<<<<<< HEAD
   width: 450px;
   margin-left: auto;
   margin-right: auto;
   
   background-color: #ccc;
+=======
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  padding:20px;
+  
+  background-color: #007A9C;
+  
+  border-radius:10px;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
 }
 
 #radcontentcontainer {
   float:left;
+<<<<<<< HEAD
   margin:20px;
 }
 
@@ -141,4 +207,30 @@
   margin-left:20px;
   margin-top:50px;
   float:left;
+=======
+  
+  background-color: #D68BB5;
+  padding: 20px;
+  
+  border-radius:10px;
+}
+
+#radhandlecontainer {
+  margin-top:50px;
+  float:left;
+}
+
+#radmachine{
+  overflow:hidden;
+}
+
+#radmenu {
+  clear:both;
+  margin-top: 20px;
+}
+
+#radmenu .button{
+  width: 45px;
+  height:28px;
+>>>>>>> 8ef7b2bcca4f0b0b44fc8764955725bc4e363a69
 }

@@ -4,7 +4,7 @@
     <title>The Name Game</title>
     
     <script type="text/javascript" src="scripts/libs/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>    
+    <script type="text/javascript" src="scripts/main.js"></script> 
     
     <link href="style/style.css" rel="stylesheet" type="text/css" />
     
@@ -16,6 +16,33 @@
             padding: 0px;
         }
     </style>
+    
+    <!--
+      RAD
+    -->
+    <!-- used for the rad -->
+    <link rel="stylesheet" type="text/css" href="style/radstyle.css"/>
+    <script type="text/javascript" src="scripts/libs/jqueryUIeasing.js" ></script>
+    
+    <!-- rad settings -->
+    <script type="text/javascript">
+        var NAMESONTOP = 30;
+        var RADFILLNUMBER = 5;
+        var SCROLLNORMAL = 20;
+        var SCROLLTIME = 1500;
+      
+        var EASING = "easeOutCirc";
+      
+        var data = JSON.parse(localStorage.filteredData);
+    </script> 
+    <!-- rad: the script -->
+    <script type="text/javascript" src="scripts/radscript.js"></script>
+    <!--
+       END RAD
+    -->
+    
+    
+    
 </head>
 
 <body>
@@ -24,6 +51,52 @@
     <div id="carrousel">
         <div id="wheel">
             <span class="name">Jeroen</span>
+            
+            
+            
+            <div id="radtotal" class="rad">
+            
+              <div id="radmachine">
+                <div id="radcontentcontainer">
+                  <div id="radshadowtop"></div>
+                  <div id="radshadowbottom"></div>
+                  <div id="radview">
+                    <div id="radcontent">
+                    </div>
+                  </div>
+                </div>
+                
+                <div id="radhandlecontainer">
+                  <a onclick="handledown()">
+                    <div id="radhandle">
+                      <div id="radhandlebg"></div>
+                      <div id="radhandletop"></div>
+                      <div id="radhandlebar"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              
+              <div id="radmenu">
+                <a href=""><div class="button" style="background-image:url('img/favoriet.png')"></div></a>
+                <a href=""><div class="button" style="background-image:url('img/Vuilbak.png')"></div></a>
+                <a href=""><div class="button" style="background-image:url('img/filter.png')"></div></a>
+              </div>
+              
+            </div>
+            
+            <!-- TEMPORARY (remove after layouting) -->
+            <div>
+            <a onclick="$('#radhandle').addClass('down');">
+              DOWN
+            </a> ---- 
+            <a onclick="$('#radhandle').removeClass('down');">
+              UP
+            </a>
+            </div>
+            <!-- end temp -->
+            
+            
             
             <ul class="menu">
                 <li><a href="home.html">Rad</a></li>
