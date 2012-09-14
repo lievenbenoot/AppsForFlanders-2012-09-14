@@ -104,6 +104,17 @@ ul.menu li a {
     display: block;
     line-height: 30px;
 }
+span.new {
+    background-color: #ccc;
+    float: right;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+span.new:hover {
+    background-color: #aaa;
+}
 
 .clear {
     clear: both;
