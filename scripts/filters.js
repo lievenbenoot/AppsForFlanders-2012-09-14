@@ -79,5 +79,4 @@ function filterUpdated(){
     })
     localStorage['filteredData'] =JSON.stringify(filteredNames);
     console.log(JSON.parse(localStorage['filteredData']));
-    $('#filterResult').html(JSON.parse(localStorage['filteredData']));
 }
