@@ -1,15 +1,15 @@
 
 $(function() {  
     if(typeof localStorage["filterShowBoys"]== 'undefined')
-        localStorage["filterShowBoys"]='true';
+        localStorage["filterShowBoys"]=true;
     if(typeof localStorage["filterShowGirls"]== 'undefined')
-        localStorage["filterShowGirls"]='true';
+        localStorage["filterShowGirls"]=true;
     if(typeof localStorage["popular"]== 'undefined')
-        localStorage["popular"]='true';
+        localStorage["popular"]=true;
     if(typeof localStorage["original"]== 'undefined')
-        localStorage["original"]='true';
+        localStorage["original"]=true;
     if(typeof localStorage["common"]== 'undefined')
-        localStorage["common"]='true';
+        localStorage["common"]=true;
         
     $('div#fireFilterSection').click(function(event) {
         $('div#filter').slideToggle('slow', function() {
@@ -79,5 +79,5 @@ function filterUpdated(){
     })
     localStorage['filteredData'] =JSON.stringify(filteredNames);
     console.log(JSON.parse(localStorage['filteredData']));
-    
+    $('#filterResult').html(JSON.parse(localStorage['filteredData']));
 }
