@@ -20,8 +20,7 @@ Array.prototype.remove = function(name) {
 
 $(function() {   
     //localStorage.clear();    
-    
-    localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));
+
     /*localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));*/  
     
     if(typeof localStorage['selectedAccount'] == 'undefined') {
@@ -150,7 +149,7 @@ function addToBin() {
         bin = new Array();
     }
     else {
-        bin = JSON.parse(localStorage['favorites']);
+        bin = JSON.parse(localStorage['recycleBin']);
     }
     
     bin.push(currentnamedata);

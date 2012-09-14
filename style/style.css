@@ -87,7 +87,6 @@ div#carrousel {
     height: 100%;
     width: 99999px;
     overflow: hidden;
-    border: 1px solid red;
 }
 div#carrousel>div {
     position: relative;
