@@ -42,7 +42,7 @@ $(function() {
     }
     else if($("div#matchScreen").length > 0) {
         loadMatchScreen();
-
+    }
     else if($("div#accountScreen").length > 0) {
         loadAccountScreen();
     }
