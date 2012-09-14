@@ -19,6 +19,7 @@ Array.prototype.remove = function(name) {
 }
 
 $(function() {   
+<<<<<<< HEAD
     //localStorage.clear();    
     localStorage['favorites'] = JSON.stringify(new Array());
     localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));
@@ -29,19 +30,16 @@ $(function() {
         localStorage['selectedAccount'] = 'Account 1';
         localStorage['accounts'] = JSON.stringify(new Array("Account 1"));
     } 
+=======
+    /*localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
+    localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));*/
+>>>>>>> 7bd896af44bdf15064d38e35e693870b39b74f93
      
-
     if($("div#loadScreen").length > 0) {
         loadFilteredJson();
     }
     else if($("div#favoritesScreen").length > 0) {
         loadFavoritesScreen();
-    }
-    else if($("div#matchScreen").length > 0) {
-        loadMatchScreen();
-    }
-    else if($("div#accountScreen").length > 0) {
-        loadAccountScreen();
     }
     else {
         windowWidth = $(window).width();
@@ -82,7 +80,7 @@ function loadFilteredJson() {
        
                 data = data.concat(girls.sqlquery);                
                 localStorage['data'] = JSON.stringify(data);
-                localStorage['filteredData']=localStorage['data'];
+                localStorage['filteredData']=localStorage['data'] ;
                 window.location.href = 'home.html';
             });
         });
@@ -92,6 +90,7 @@ function loadFilteredJson() {
     }
 }
 
+<<<<<<< HEAD
 function findByName(name) {
     var names=JSON.parse(localStorage['data']);
     
@@ -104,6 +103,10 @@ function findByName(name) {
     });
     
     return result;
+=======
+function loadFavorites() {
+    
+>>>>>>> 7bd896af44bdf15064d38e35e693870b39b74f93
 }
 
 /**
@@ -142,3 +145,12 @@ function addToFavorite() {
     
     localStorage['favorites'] = JSON.stringify(favorites);
 }
+
+var currentnamedata=null;
+function setCurrentName(_currentnamedata) {
+  currentnamedata=_currentnamedata;
+  var max = (currentnamedata["gender"]=="girl"?girlMaxed:boyMaxed);
+  $("#user_name").text(currentnamedata["name"]);
+  $("#user_populatirity").text("Populariteit: "+(currentnamedata["amount"]/max)*100+"%");
+}
+

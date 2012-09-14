@@ -51,6 +51,7 @@ function scrollUp(count){
       }
       
       // TODO -> give it to the others :)
+      setCurrentName(names[((RADFILLNUMBER-1)/2)]);
       //alert("Hello, "+names[((RADFILLNUMBER-1)/2)]+"!");
     });
 }
