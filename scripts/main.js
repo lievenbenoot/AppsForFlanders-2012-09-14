@@ -65,10 +65,9 @@ function loadFilteredJson() {
             $.getJSON("http://data.appsforflanders.be/sql.json?query=SELECT%20*,%20'girl'%20gender%20FROM%20givennames.girls_born_2007_fl", function(girls) {
                 girlMaxed = girls.sqlquery[0].amount;
        
-                data = data.concat(girls.sqlquery);
-                
-                localStorage['data'] = data;
-                
+                data = data.concat(girls.sqlquery);                
+                localStorage['data'] = JSON.stringify(data);
+                localStorage['filteredData']=localStorage['data'] ;
                 window.location.href = 'home.html';
             });
         });

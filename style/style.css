@@ -1,3 +1,54 @@
+<<<<<<< HEAD
+=======
+body {
+}
+
+/* Filters */
+#filterSection {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 0px;
+    width: 100%;
+}
+#filterSection li {
+    margin-left: 25px;
+    padding: 5px;
+    text-align: left;
+    /*cursor: pointer;*/
+}
+
+#filter {
+    /*background-color: #0000EE;*/
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 10000;
+}
+.filter {
+    border-radius: 10px;
+}
+div#fireFilterSection {
+    padding: 6px;
+    font-size: 16pt;
+    cursor: pointer;
+    height: 16px;
+}
+#legendarrow {
+    width:20px;
+}
+.rotate {
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); /* IE 9 */
+    -moz-transform:rotate(90deg); /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari and Chrome */
+    -o-transform:rotate(90deg); /* Opera */
+} 
+ol, ul {
+    list-style: none;
+}
+
+>>>>>>> d02fb7bdbe25243f2e33234761eb6f74e20d4de8
 /* CARROUSEL */
 div#homeScreen {
     overflow: hidden;
@@ -20,6 +71,7 @@ span.name {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 div.element {
     background-color: #ccc;
     border-radius: 10px;
@@ -62,3 +114,5 @@ ul.menu li a {
 .clear {
     clear: both;
 }
+=======
+>>>>>>> d02fb7bdbe25243f2e33234761eb6f74e20d4de8
