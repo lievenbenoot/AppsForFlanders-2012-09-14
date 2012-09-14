@@ -22,7 +22,7 @@
     <!-- used for the rad -->
     <link rel="stylesheet" type="text/css" href="style/radstyle.css"/>
     <script type="text/javascript" src="scripts/libs/jqueryUIeasing.js" ></script>
-    
+     <script type="text/javascript" src="scripts/filters.js"></script>
     <!-- rad settings -->
     <script type="text/javascript">
         var NAMESONTOP = 30;
@@ -45,6 +45,27 @@
 </head>
 
 <body>
+
+<div id="header">
+    <div id="fireFilterSection">             
+        <img id="legendarrow" src="img/legend-arrow.png" />                
+        Filter       
+    </div>        
+    <div id="filter" > <!--style="display: none;"--> 
+        <ul id="filterSection">
+            <li>Gender:
+                <input id="boys" type="checkbox" checked="checked"></input><label class="chkForLabel" for="boys">Boys</label>
+                <input id="girls" type="checkbox" checked="checked"></input><label class="chkForLabel" for="girls">Girls</label>
+            </li>
+            <li>
+                Popularity:
+                <input id="popular" type="checkbox" checked="checked"/><label class="chkForLabel" for="popular">Popular</label>
+                <input id="common" type="checkbox" checked="checked"/><label class="chkForLabel" for="common">Common</label>
+                <input id="original" type="checkbox" checked="checked"/><label class="chkForLabel" for="Original">Original</label>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <div id="homeScreen">
     <div id="carrousel">
@@ -87,10 +108,10 @@
             
             
             <ul class="menu">
-                <li><a href="home.html">Rad</a></li>
-                <li><a href="favorites.html">Favorieten</a></li>
-                <li><a href="#">Match</a></li>
-                <li><a href="accounts.html">Accounts</a></li>
+                <li><a href="home.html"><img src="img/menu/automaat.png" alt="automaat" /></a></li>
+                <li><a href="favorites.html"><img src="img/menu/favoriet_menu.png" alt="Favoriet" /></a></li>
+                <li><a href="#"><img src="img/menu/match.png" alt="Match" /></a></li>
+                <li><a href="accounts.html"><img src="img/menu/account.png" alt="Account" /></a></li>
             </ul>
         </div>
         <div id="information">

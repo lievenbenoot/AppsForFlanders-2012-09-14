@@ -19,20 +19,29 @@ Array.prototype.remove = function(name) {
 }
 
 $(function() {   
-    /*localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
+    localStorage.clear();    
+    localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
     localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));
-    localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));*/  
+    localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));
+    /*localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));*/  
+    
+    /*var name = searchByName('Sam');
+    console.log(name);*/
     
     if(typeof localStorage['selectedAccount'] == 'undefined') {
         localStorage['selectedAccount'] = 'Account 1';
         localStorage['accounts'] = JSON.stringify(new Array("Account 1"));
     } 
      
+
     if($("div#loadScreen").length > 0) {
         loadFilteredJson();
     }
     else if($("div#favoritesScreen").length > 0) {
         loadFavoritesScreen();
+    }
+    else if($("div#matchScreen").length > 0) {
+        loadMatchScreen();
     }
     else if($("div#accountScreen").length > 0) {
         loadAccountScreen();
@@ -76,7 +85,7 @@ function loadFilteredJson() {
        
                 data = data.concat(girls.sqlquery);                
                 localStorage['data'] = JSON.stringify(data);
-                localStorage['filteredData']=localStorage['data'] ;
+                localStorage['filteredData']=localStorage['data'];
                 window.location.href = 'home.html';
             });
         });
@@ -84,6 +93,16 @@ function loadFilteredJson() {
     else {
         window.location.href = 'home.html';
     }
+}
+
+function searchByName(name) {
+    var names=JSON.parse(localStorage['data']);
+    
+    $.each(names, function(key, val) {
+        if(val.name == name) {
+            return val;
+        }    
+    });
 }
 
 /**
