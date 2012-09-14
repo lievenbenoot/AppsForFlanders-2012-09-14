@@ -29,12 +29,16 @@ div#loadScreen img {
 }
 
 /* Filters */
+#header{
+    color:#F4FFE4;
+}
 #filterSection {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
     padding-top: 0px;
     width: 100%;
+    background-color:#8DD2E2;
 }
 #filterSection li {
     margin-left: 25px;
@@ -44,6 +48,7 @@ div#loadScreen img {
 }
 
 #filter {
+    
     /*background-color: #0000EE;*/
     position: absolute;
     left: 0px;
@@ -58,6 +63,7 @@ div#fireFilterSection {
     font-size: 16pt;
     cursor: pointer;
     height: 16px;
+    background-color:#007A9C;
 }
 #legendarrow {
     width:20px;
