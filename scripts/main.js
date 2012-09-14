@@ -21,12 +21,16 @@ Array.prototype.remove = function(name) {
 $(function() {   
     /*localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
     localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));*/
-     
+    localStorage['accounts']=JSON.stringify(new Array('lieven','sam'));
+    
     if($("div#loadScreen").length > 0) {
         loadFilteredJson();
     }
     else if($("div#favoritesScreen").length > 0) {
         loadFavoritesScreen();
+    }
+    else if($("div#matchScreen").length > 0) {
+        loadMatchScreen();
     }
     else {
         windowWidth = $(window).width();
@@ -67,7 +71,7 @@ function loadFilteredJson() {
        
                 data = data.concat(girls.sqlquery);                
                 localStorage['data'] = JSON.stringify(data);
-                localStorage['filteredData']=localStorage['data'] ;
+                localStorage['filteredData']=localStorage['data'];
                 window.location.href = 'home.html';
             });
         });
