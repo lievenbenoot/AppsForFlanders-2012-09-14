@@ -28,6 +28,9 @@ $(function() {
     else if($("div#favoritesScreen").length > 0) {
         loadFavoritesScreen();
     }
+    else if($("div#accountScreen").length > 0) {
+        
+    }
     else {
         windowWidth = $(window).width();
     
@@ -75,10 +78,6 @@ function loadFilteredJson() {
     else {
         window.location.href = 'home.html';
     }
-}
-
-function loadFavorites() {
-    
 }
 
 /**
