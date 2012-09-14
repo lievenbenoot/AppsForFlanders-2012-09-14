@@ -1,10 +1,7 @@
-body {
-    background-color: green;
-}
-
 /* CARROUSEL */
 div#homeScreen {
     overflow: hidden;
+    height: 100%;
 }
 div#carrousel {
     height: 100%;
@@ -21,4 +18,47 @@ div#carrousel #wheel {
 }
 span.name {
     cursor: pointer;
+}
+
+div.element {
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+div.element span {
+    float: right;
+    cursor: pointer;
+}
+
+div#wheel {
+    position: relative;
+    height: 100%;
+}
+ul.menu {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    color: white;
+    list-style-type: none;
+    padding:0;
+    margin:0;   
+}
+ul.menu li {
+    float: left;
+    width: 25%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: black;
+}
+ul.menu li a {
+    width: 100%;
+    display: block;
+    line-height: 30px;
+}
+
+.clear {
+    clear: both;
 }

@@ -3,9 +3,30 @@ var boyMaxed;
 
 var windowWidth;
 
-$(function() {    
+/**
+ * Extension to arrays:
+ * now possible to use syntax like: some_array.remove(name);
+ */
+Array.prototype.remove = function(name) {
+    for (var i = 0; i < this.length; ) {
+        if (this[i] === name) {
+            this.splice(i, 1);
+        } 
+        else {
+           ++i;
+        }
+    }
+}
+
+$(function() {   
+    /*localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
+    localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));*/
+     
     if($("div#loadScreen").length > 0) {
         loadFilteredJson();
+    }
+    else if($("div#favoritesScreen").length > 0) {
+        loadFavoritesScreen();
     }
     else {
         windowWidth = $(window).width();
@@ -17,10 +38,20 @@ $(function() {
         });
     }
     
-    $('div#information').bind('swiperight', function(event) {
+    $("span#goback").click(function(event) {
         scrollCarrousel(0);
     });
 });
+
+function removeFromLocalStorage(arrayName, name) {
+    if(typeof localStorage[arrayName] != undefined) {
+        var array = JSON.parse(localStorage[arrayName]);
+        
+        array.remove(name);
+        
+        localStorage[arrayName] = JSON.stringify(array);
+    }
+}
 
 function loadFilteredJson() {
     if(localStorage['data'] === undefined) {
@@ -47,6 +78,10 @@ function loadFilteredJson() {
     }
 }
 
+function loadFavorites() {
+    
+}
+
 /**
  * Handles the resizing of the window. 
  */
@@ -60,8 +95,6 @@ $(window).resize(function() {
  * Initializes the carrousel. Just scales the width of the window. 
  */
 function initCarrousel() {
-    alert($('div#carrousel').attr('marginLeft'));
-    
     $('div#carrousel div').each(function(){
         $(this).css({ width: windowWidth});
     }); 

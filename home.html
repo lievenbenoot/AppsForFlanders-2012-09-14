@@ -2,15 +2,20 @@
 <html>
 <head>
     <title>The Name Game</title>
-
     
-
     <script type="text/javascript" src="scripts/libs/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript" src="scripts/libs/jquery.mobile-1.1.1.min.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>    
     
     <link href="style/style.css" rel="stylesheet" type="text/css" />
-    <link href="style/jquery.mobile-1.1.1.min.css" rel="stylesheet" type="text/css" />
+    
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            background-color: green;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,12 +24,24 @@
     <div id="carrousel">
         <div id="wheel">
             <span class="name">Jeroen</span>
+            
+            <ul class="menu">
+                <li><a href="home.html">Rad</a></li>
+                <li><a href="favorites.html">Favorieten</a></li>
+                <li><a href="#">Match</a></li>
+                <li><a href="accounts.html">Accounts</a></li>
+            </ul>
         </div>
         <div id="information">
             <h1>Informatie gebruiker</h1>
+            
+            <span id="goback">Back</span>
         </div> 
     </div>
 </div>
+
+<div class="clear"></div>
+
     
 </body>
 </html>
