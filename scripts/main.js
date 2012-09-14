@@ -19,14 +19,11 @@ Array.prototype.remove = function(name) {
 }
 
 $(function() {   
-    localStorage.clear();    
-    localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
+    //localStorage.clear();    
+    localStorage['favorites'] = JSON.stringify(new Array());
     localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));
     localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));
     /*localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));*/  
-    
-    /*var name = searchByName('Sam');
-    console.log(name);*/
     
     if(typeof localStorage['selectedAccount'] == 'undefined') {
         localStorage['selectedAccount'] = 'Account 1';
@@ -95,14 +92,18 @@ function loadFilteredJson() {
     }
 }
 
-function searchByName(name) {
+function findByName(name) {
     var names=JSON.parse(localStorage['data']);
+    
+    var result;
     
     $.each(names, function(key, val) {
         if(val.name == name) {
-            return val;
+            result = val;
         }    
     });
+    
+    return result;
 }
 
 /**
@@ -132,4 +133,12 @@ function scrollCarrousel(page) {
             $('#carrousel').animate({ 'marginLeft' : 0 });
         }
     }
+}
+
+function addToFavorite() {
+    var favorites = JSON.parse(localStorage['favorites']);
+    
+    favorites.push(currentnamedata['name']);
+    
+    localStorage['favorites'] = JSON.stringify(favorites);
 }
