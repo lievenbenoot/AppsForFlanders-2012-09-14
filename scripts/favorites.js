@@ -1,4 +1,4 @@
-function loadFavoritesPage() {
+function loadFavoritesScreen() {
     if(typeof localStorage['favorites'] != 'undefined') {
         $.each(JSON.parse(localStorage['favorites']), function(key, val) {
             var del = $("<span />").attr("data-val", val).html("delete");
