@@ -60,9 +60,6 @@ div#carrousel>div {
     position: relative;
     float: left;
 }
-div#carrousel #wheel {
-    background-color: red;
-}
 span.name {
     cursor: pointer;
 }
@@ -103,17 +100,6 @@ ul.menu li a {
     width: 100%;
     display: block;
     line-height: 30px;
-}
-span.new {
-    background-color: #ccc;
-    float: right;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-span.new:hover {
-    background-color: #aaa;
 }
 
 .clear {
