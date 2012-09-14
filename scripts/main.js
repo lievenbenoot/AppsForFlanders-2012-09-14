@@ -99,7 +99,7 @@ $(window).resize(function() {
  * Initializes the carrousel. Just scales the width of the window. 
  */
 function initCarrousel() {
-    $('div#carrousel > div').each(function(){
+    $('div#carrousel>div').each(function(){
         $(this).css({ width: windowWidth});
     }); 
 }
