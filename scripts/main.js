@@ -19,12 +19,14 @@ Array.prototype.remove = function(name) {
 }
 
 $(function() {   
-    /*localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
-    localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));*/
-    localStorage['accounts']=JSON.stringify(new Array('lieven','sam'));
-    
+    localStorage.clear();    
+    localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
     localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));
     localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));
+    /*localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));*/  
+    
+    /*var name = searchByName('Sam');
+    console.log(name);*/
     
     if(typeof localStorage['selectedAccount'] == 'undefined') {
         localStorage['selectedAccount'] = 'Account 1';
@@ -91,6 +93,16 @@ function loadFilteredJson() {
     else {
         window.location.href = 'home.html';
     }
+}
+
+function searchByName(name) {
+    var names=JSON.parse(localStorage['data']);
+    
+    $.each(names, function(key, val) {
+        if(val.name == name) {
+            return val;
+        }    
+    });
 }
 
 /**
