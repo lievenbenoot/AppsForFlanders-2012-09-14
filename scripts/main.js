@@ -19,10 +19,8 @@ Array.prototype.remove = function(name) {
 }
 
 $(function() {   
-<<<<<<< HEAD
     //localStorage.clear();    
-    localStorage['favorites'] = JSON.stringify(new Array());
-    localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));
+    
     localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));
     /*localStorage['accounts'] = JSON.stringify(new Array("Account 1", "Account 2"));*/  
     
@@ -30,10 +28,8 @@ $(function() {
         localStorage['selectedAccount'] = 'Account 1';
         localStorage['accounts'] = JSON.stringify(new Array("Account 1"));
     } 
-=======
     /*localStorage['favorites'] = JSON.stringify(new Array("Jeroen", "Lieven"));
     localStorage['recycleBin'] = JSON.stringify(new Array("Test", "Test 2"));*/
->>>>>>> 7bd896af44bdf15064d38e35e693870b39b74f93
      
     if($("div#loadScreen").length > 0) {
         loadFilteredJson();
@@ -90,7 +86,6 @@ function loadFilteredJson() {
     }
 }
 
-<<<<<<< HEAD
 function findByName(name) {
     var names=JSON.parse(localStorage['data']);
     
@@ -103,10 +98,6 @@ function findByName(name) {
     });
     
     return result;
-=======
-function loadFavorites() {
-    
->>>>>>> 7bd896af44bdf15064d38e35e693870b39b74f93
 }
 
 /**
@@ -139,11 +130,32 @@ function scrollCarrousel(page) {
 }
 
 function addToFavorite() {
-    var favorites = JSON.parse(localStorage['favorites']);
+    var favorites;
+    if(typeof localStorage['favorites'] == 'undefined') {
+        favorites = new Array();
+    }
+    else {
+        favorites = JSON.parse(localStorage['favorites']);
+    }
     
-    favorites.push(currentnamedata['name']);
+    
+    favorites.push(currentnamedata);
     
     localStorage['favorites'] = JSON.stringify(favorites);
+}
+
+function addToBin() {
+    var bin;
+    if(typeof localStorage['recycleBin'] == 'undefined') {
+        bin = new Array();
+    }
+    else {
+        bin = JSON.parse(localStorage['favorites']);
+    }
+    
+    bin.push(currentnamedata);
+    
+    localStorage['recycleBin'] = JSON.stringify(bin);
 }
 
 var currentnamedata=null;
